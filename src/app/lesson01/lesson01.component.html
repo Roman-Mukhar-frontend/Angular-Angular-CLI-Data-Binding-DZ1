@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="title">
+        <p class="bad-words"><span class="text-one">Bad words:</span>  {{badWordsList}}</p>
+    </div>
+
+    <form class="form" onsubmit="return false">
+        <input type="text" class="input-one" placeholder={{placeholderOne}} id="input" [(ngModel)]="badWord" [ngModelOptions]="{standalone: true}">
+        <input type="button" value="Add" class="btn add" (click)="btnAdd()">
+        <input type="button" value="Reset" class="btn reset" (click)="btnReset()">
+        <textarea class="input-two" placeholder={{placeholderTwo}} [(ngModel)]="text" [ngModelOptions]="{standalone: true}"></textarea>
+        <input type="button" value="Cenzor" class="big-btn" (click)="btnCenzor()">
+    </form>
+</div>
