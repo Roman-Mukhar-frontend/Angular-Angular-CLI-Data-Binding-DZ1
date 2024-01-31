@@ -1,0 +1,55 @@
+<div class="window">
+    <div class="left">
+        <form (input)="checkData()">
+            <p class="title">Login</p>
+            <input type="text" class="input" placeholder="Enter login" [(ngModel)]="login" [ngModelOptions]="{standalone: true}">
+            <p class="title">Password</p>
+            <input type="password" class="input" placeholder="Enter password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}">
+            <p class="title">Email address</p>
+            <input type="text" class="input" placeholder="Enter email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+            <input *ngIf="!EditButtonStatus" type="button" value="Add user" class="button" (click)="addUser()">
+            <input *ngIf="EditButtonStatus" type="button" value="save edit user" class="button button-save"
+                (click)="saveEditUser()" >
+        </form>
+    </div>
+    <div class="right">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                        <p class="title-table one">#</p>
+                    </td>
+                    <td>
+                        <p class="title-table two">Login</p>
+                    </td>
+                    <td>
+                        <p class="title-table three">Password</p>
+                    </td>
+                    <td>
+                        <p class="title-table four">Email</p>
+                    </td>
+                    <td>
+                        <p class="title-table five ">Edit</p>
+                    </td>
+                    <td>
+                        <p class="title-table six">Delete</p>
+                    </td>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let user of usersPushArr; index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{ user.login }}</td>
+                    <td>{{ user.pass }}</td>
+                    <td>{{ user.email }}</td>
+                    <td> <input type="button" class="btn edit" value="Edit" (click)="editUser(i)"></td>
+                    <td> <input type="button" [disabled]="EditButtonStatus" class="btn delete" value="Delete"
+                            (click)="deleteUser(i)"></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.window {
+    width: 100%;
+    display: flex;
+}
+
+.left,
+.right {
+    width: 50%;
+    padding: 20px;
+}
+
+.title {
+    font-size: 30px;
+}
+
+.input {
+    width: 80%;
+    margin: 20px 0 20px 0;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+
+.button {
+    width: 80%;
+    height: 30px;
+    border: 2px solid green;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    background-color: green;
+}
+
+.button-save {
+    background-color: aqua;
+}
+
+.title-table {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.one {
+    width: 10px;
+}
+
+.two,
+.three,
+.four {
+    width: 150px;
+}
+
+.five,
+.six {
+    width: 70px;
+}
+
+td {
+    text-align: center;
+    font-size: 14px;
+    height: 40px;
+}
+
+.btn {
+    border-radius: 5px;
+    text-align: center;
+    color: aliceblue;
+    width: 80%;
+    cursor: pointer;
+}
+
+.edit {
+    background-color: orange;
+}
+
+.delete {
+    background-color: red;
+}
