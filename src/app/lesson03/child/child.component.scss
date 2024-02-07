@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.table {
+    width: 100%;
+}
+
+.title-table {
+    font-size: 20px;
+    font-weight: 900;
+    padding: 10px;
+    text-align: center;
+}
+
+.td {
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.green {
+    width: 20%;
+    color: green;
+}
+
+.red {
+    width: 20%;
+    color: red;
+}
+
+.btn {
+    background-color: chartreuse;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.delete {
+    background-color: red;
+}
+
+.disabled {
+    background-color: rgba(255, 0, 0, 0.282);
+}

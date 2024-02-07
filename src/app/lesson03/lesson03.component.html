@@ -1,0 +1,15 @@
+<div class="window">
+    <div class="wrapper">
+        <p class="title">Plan your day!</p>
+        <p class="user">User: Ivan Ivanov. Count of Tasks {{taskCount}}</p>
+        <hr>
+        <form class="form">
+            <input type="text" class="input" [(ngModel)]="taskName" [ngModelOptions]="{standalone: true}"
+                (focus)="focusInput()" (blur)="focusBlur()" [class.inputEventClass]="inputEvent">
+            <input type="button" value="Add" class="btn" (click)="addTask()" [class.disabled]="!taskName"
+                [disabled]="!taskName">
+        </form>
+        <hr>
+    </div>
+    <app-child [taskInfo]="taskObj" (taskCountfromChild)="getData($event)"></app-child>
+</div>

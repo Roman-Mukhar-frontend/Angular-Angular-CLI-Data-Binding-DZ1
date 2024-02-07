@@ -1,0 +1,60 @@
+<div class="wrapper">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>
+                    <p class="title-table one">#</p>
+                </td>
+                <td>
+                    <p class="title-table two">Task</p>
+                </td>
+                <td>
+                    <p class="title-table two">Check</p>
+                </td>
+                <td>
+                    <p class="title-table two">Done/In progress</p>
+                </td>
+                <td>
+                    <p class="title-table two">Edit</p>
+                </td>
+                <td>
+                    <p class="title-table two">Delete</p>
+                </td>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let task of taskArr; index as i">
+                <td class="td">{{i+1}}</td>
+                <td class="td">{{ task.name }}</td>
+                <td class="td">
+                    <input type="checkbox" [ngModel]=this.task.status (change)="changeStatus(i)">
+                </td>
+                <td class="td green" *ngIf="this.task.status">Done</td>
+                <td class="td red" *ngIf="!this.task.status">IN PROGRESS
+                </td>
+
+                <td class="td"> <input type="button" class="btn edit" value="Edit" (click)="editUser(i)">
+                </td>
+                <td class="td"> <input type="button" class="btn delete" value="Delete"
+                        [class.disabled]="!this.task.status || this.editUserBtn"
+                        [disabled]="!this.task.status || this.editUserBtn" (click)="deleteUser(i)">
+                </td>
+            </tr>
+            <tr *ngIf="editUserBtn">
+                <td class="td"></td>
+                <td class="td"></td>
+                <td class="td"></td>
+                <td class="td">
+                    <input type="text" [(ngModel)]="editTask" [ngModelOptions]="{standalone: true}">
+                </td>
+                <td class="td">
+                    <input type="button" class="btn delete" value="Save" (click)="saveEditTask()">
+                </td>
+                <td class="td"></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+</div>
