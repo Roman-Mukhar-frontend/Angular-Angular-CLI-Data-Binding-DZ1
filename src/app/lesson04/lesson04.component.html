@@ -1,0 +1,97 @@
+<div class="window">
+    <div class="wrapper">
+        <p class="title">My phone book!</p>
+
+        <hr>
+        <form class="form">
+            <input type="text" class="input" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"
+                (focus)="focusInput()" (blur)="focusBlur()" [class.inputEventClass]="inputEvent"
+                placeholder="search text goes here">
+            <input type="button" value="add phone" class="button-add" (click)="addContact()">
+        </form>
+        <hr>
+        <table class="table">
+            <thead>
+                <tr>
+                    <td class="td">
+                        <div class="flex-td">
+                            <div class="title-table pointer" (click)="changeSortByName()">First Name</div>
+                            <div *ngIf="statusSortName">
+                                <div *ngIf="type === 'desc'" class="triangle top"></div>
+                                <div *ngIf="type === 'asc'" class="triangle bottom"></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="td">
+                        <div class="flex-td">
+                            <div class="title-table pointer" (click)="changeSortByLastName()">Last Name</div>
+                            <div *ngIf="statusSortLaName">
+                                <div *ngIf="typeForLastName === 'desc'" class="triangle top"></div>
+                                <div *ngIf="typeForLastName === 'asc'" class="triangle bottom"></div>
+                            </div>
+                        </div>
+
+
+                    </td>
+                    <td class="td">
+                        <div class="flex-td">
+                            <div class="title-table pointer" (click)="changeSortByNumber()">Number</div>
+                            <div *ngIf="statusSortNum">
+
+                                <div *ngIf="typeForNumber === 'desc'" class="triangle top"></div>
+                                <div *ngIf="typeForNumber === 'asc'" class="triangle bottom"></div>
+                            </div>
+                        </div>
+
+
+                    </td>
+                    <td>
+                        <p class="title-table">Edit</p>
+                    </td>
+                    <td>
+                        <p class="title-table">Delete</p>
+                    </td>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr
+                    *ngFor="let contact of phoneKontactsArr | search:searchText | sort:type | sortLastName:typeForLastName | sortNumber:typeForNumber ; index as i ">
+                    <td class="td">{{ contact.firstName }}</td>
+                    <td class="td">{{ contact.lastName }}</td>
+                    <td class="td green">{{ contact.number }}</td>
+                    <td class="td"> <input type="button" class="btn edit" value="Edit" (click)="editUser(i)">
+                    </td>
+                    <td class="td"> <input type="button" class="btn delete" value="Delete" (click)="deleteUser(i)">
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <hr>
+    </div>
+</div>
+<div class="modal" *ngIf="showModal">
+    <div class="modal-window">
+        <div class="modal-window-title">
+            <p class="modal-window-title-text">Add phone</p>
+            <p class="modal-window-title-exit" (click)="closeModal()">х</p>
+
+        </div>
+        <hr>
+        <form class="modal-form">
+            <input type="text" class="modal-form-input" placeholder="first name goes here" [(ngModel)]="firstName"
+                [ngModelOptions]="{standalone: true}">
+            <input type="text" class="modal-form-input" placeholder="second name goes here" [(ngModel)]="lastName"
+                [ngModelOptions]="{standalone: true}">
+            <input type="text" class="modal-form-input" placeholder="phone number goes here" [(ngModel)]="phoneNumber"
+                [ngModelOptions]="{standalone: true}">
+        </form>
+        <hr>
+        <form class="modal-form-btn">
+            <input type="button" class="modal-form-btn-save" value="Save" (click)="saveContact()">
+        </form>
+    </div>
+
+</div>

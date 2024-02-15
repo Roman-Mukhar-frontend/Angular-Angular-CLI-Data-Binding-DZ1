@@ -20,23 +20,23 @@ export class Lesson03Component implements OnInit {
   }
 
   focusInput(): void {
-    this.inputEvent = !this.inputEvent;
+    this.inputEvent = true;
   }
 
   focusBlur(): void {
     this.inputEvent = !this.inputEvent;
   }
 
-  addTask(): void {
-    this.taskCount += 1;
-    this.taskObj = {
-      name: this.taskName,
-      status: false
-    }
-    this.taskName = '';
+    addTask(): void {
+      this.taskCount +=1;
+      this.taskObj = {
+        name: this.taskName,
+        status: false
+      }
+      this.taskName = '';
 
 
-
+    
   }
   getData(data: number): void {
     this.taskCount = data;

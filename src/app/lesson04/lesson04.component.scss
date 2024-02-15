@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.window {
+    width: 100%;
+    background-color: rgb(127, 255, 212);
+    padding: 20px;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 40px;
+    color: red;
+    font-weight: 900;
+}
+
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.input {
+    width: 88%;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.button-add {
+    width: 10%;
+    border-radius: 5px;
+    background-color: rgb(0, 128, 0);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.inputEventClass {
+    outline: rgba(0, 0, 255, 0.285) solid 3px;
+}
+
+.table {
+    width: 100%;
+}
+
+.title-table {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.td {
+    text-align: center;
+    width: 20%;
+}
+
+.btn {
+    background-color: chartreuse;
+    width: 50%;
+    height: 30px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.delete {
+    background-color: red;
+}
+
+.disabled {
+    background-color: rgba(255, 0, 0, 0.282);
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.31);
+}
+
+.modal-window {
+    width: 40%;
+    margin: 100px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.modal-window-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    margin: 10px auto;
+}
+
+.modal-window-title-exit {
+    cursor: pointer;
+}
+
+.modal-form {
+    height: 170px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 30px;
+}
+
+.modal-form-btn {
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
+
+.modal-form-btn-save {
+    width: 60px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.flex-td {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+}
+
+.bottom {
+    border-top: 10px solid grey;
+    border-right: 10px solid transparent;
+    border-bottom: 0 solid transparent;
+    border-left: 10px solid transparent;
+}
+
+.top {
+    border-top: 0 solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid grey;
+    border-left: 10px solid transparent;
+}
