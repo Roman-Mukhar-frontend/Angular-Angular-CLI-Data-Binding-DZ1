@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 100px;
+}
+
+.task {
+  width: 30%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.title {
+  background-color: aqua;
+  padding: 10px 0;
+}
+
+.bottom {
+  width: 100%;
+  background-color: aqua;
+}
+
+.btn {
+  width: 50%;
+  height: 50px;
+  margin: 25px auto;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+}/*# sourceMappingURL=home.component.css.map */

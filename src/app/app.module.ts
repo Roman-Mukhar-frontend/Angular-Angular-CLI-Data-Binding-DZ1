@@ -13,6 +13,12 @@ import { SearchPipe } from './lesson04/search.pipe';
 import { SortPipe } from './lesson04/sort.pipe';
 import { SortLastNamePipe } from './lesson04/sort-last-name.pipe';
 import { SortNumberPipe } from './lesson04/sort-number.pipe';
+import { Lesson05Component } from './lesson05/lesson05.component';
+import { HeaderComponent } from './lesson05/components/header/header.component';
+import { HomeComponent } from './lesson05/pages/home/home.component';
+import { WorkComponent } from './lesson05/pages/work/work.component';
+import { FooterComponent } from './lesson05/components/footer/footer.component';
+
 
 @NgModule({
   declarations: [
@@ -26,6 +32,11 @@ import { SortNumberPipe } from './lesson04/sort-number.pipe';
     SortPipe,
     SortLastNamePipe,
     SortNumberPipe,
+    Lesson05Component,
+    HeaderComponent,
+    HomeComponent,
+    WorkComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

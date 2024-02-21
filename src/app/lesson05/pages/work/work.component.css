@@ -1,0 +1,15 @@
+.head {
+  display: flex;
+}
+
+.last {
+  margin: 8px 40px;
+}
+
+.back {
+  width: 70%;
+  text-align: end;
+  margin: 8px 0;
+  cursor: pointer;
+  color: red;
+}/*# sourceMappingURL=work.component.css.map */
